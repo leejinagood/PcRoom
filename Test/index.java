@@ -89,18 +89,54 @@ public class index {
             if (rs.next()) { //다음것이있나?true/false로 반환
                 if (rs.getString(1).equals(PwdOK)) {
                     //sql로 실행한 비번과 접속시도한 비번이 맞으면 로그인 성공
-                    System.out.println("로그인 성공");
+                    System.out.println("환영합니다.");
+                    Thread.sleep(1000);
                 } else {
                     System.out.println("비밀번호가 다릅니다.");
+                    System.out.print("다시 시작하세요");
+                    System.exit(0); //강제종료
                 }
             }
-            System.out.println("아이디가 존재하지 않습니다.");
         } catch (Exception e) {
             e.printStackTrace();
         }
 
+        while(true) {
+            System.out.print("=======메뉴판=======\n 1.음식 주문 \n 2.요금제 주문 \n 3.계정정보 수정 \n 4.게임시작 \n 5.종료\n==================\n(1,2,3,4,5) ->>");
+            String ans2 = scan.next();
 
+            //1. 음식주문
+            if (ans2.equals("1")) {
 
+            }
+
+            //2. 요금제 주문
+            else if (ans2.equals("2")) {
+
+            }
+
+            //3.계정정보 수정
+            else if (ans2.equals("3")) {
+
+            }
+
+            //4. 게임시작
+            else if (ans2.equals("4")) {
+
+            }
+
+            //5. 종료
+            else if (ans2.equals("5")){
+                System.out.println("종료합니다..");
+                Thread.sleep(1000);
+                break;
+            }
+
+            //잘못된 입력값을 받으면 재입력
+            else {
+                System.out.println("잘못된 입력입니다. \n");
+            }
+        }
     }
 }
 
